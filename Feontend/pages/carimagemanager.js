@@ -58,7 +58,7 @@ const carimagemanager = () => {
 
     const fetchDatacar = async () => {
         try {
-            const apiUrl = 'http://13.211.124.91/cardataadmin';
+            const apiUrl = 'http://apiหลังบ้านcardataadmin';
             const response = await axios.get(apiUrl);
             setDataSource(response.data);
             console.log(dataSource)

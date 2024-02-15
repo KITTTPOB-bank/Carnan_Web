@@ -1,0 +1,8 @@
+fastapi
+pymongo
+python-multipart
+pyjwt
+pymongo
+boto3
+numpy
+uvicorn

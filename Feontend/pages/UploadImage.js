@@ -58,7 +58,7 @@ const UploadImage = () => {
         onDrop
     })
     const submit = async () => {
-        const apiUrl = 'http://13.211.124.91/uploadscars';
+        const apiUrl = 'http://apiหลังบ้านuploadscars';
         if (files.length == 0) {
             alert('ไม่มีรูปภาพที่จะอัปโหลด!')
             return

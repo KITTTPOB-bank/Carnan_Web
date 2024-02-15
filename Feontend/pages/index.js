@@ -52,7 +52,7 @@ export default function Home() {
 
   const fetchDatacar = async () => {
     try {
-      const apiUrl = 'http://13.211.124.91/getallcar';
+      const apiUrl = 'http://apiหลังบ้านgetallcar';
       const response = await axios.get(apiUrl);
       const data = response.data
       const yearArray = [];

@@ -96,7 +96,7 @@ const Tablepart = () => {
     formData.append("file", file);
 
     await axios
-      .post(`http://13.211.124.91/jsonfile?typecheck=${typesend}`, formData)
+      .post(`http://apiหลังบ้านjsonfile?typecheck=${typesend}`, formData)
       .then((response) => {
         console.log("Upload successful", response.data);
       })
@@ -176,7 +176,7 @@ const Tablepart = () => {
 
   const fetchDatapart = async () => {
     try {
-      const apiUrl = "http://13.211.124.91/carpartall";
+      const apiUrl = "http://apiหลังบ้านcarpartall";
       const response = await axios.get(apiUrl);
       setallDataSource(response.data);
       setDataSource(response.data.all_frontbumper);
@@ -396,7 +396,7 @@ const Tablepart = () => {
   ];
 
   const handleDelete = async (id) => {
-    const apiUrl = "http://13.211.124.91/deleteallpart";
+    const apiUrl = "http://apiหลังบ้านdeleteallpart";
     const requestData = {
       delid: id,
       type: typesend,
@@ -446,7 +446,7 @@ const Tablepart = () => {
   };
 
   const AddNewData = async () => {
-    const apiUrl = "http://13.211.124.91/addallpart";
+    const apiUrl = "http://apiหลังบ้านaddallpart";
     const requestData = {
       name: name_new,
       code: code_new,
@@ -464,7 +464,7 @@ const Tablepart = () => {
 
   const Editpartdata = async () => {
     console.log(editValue);
-    const apiUrl = "http://13.211.124.91/editallpart";
+    const apiUrl = "http://apiหลังบ้านeditallpart";
     const requestData = {
       name: name_edit,
       code: code_edit,

@@ -48,7 +48,7 @@ const imagescar = () => {
     };
     const fetchDataimage = async () => {
         try {
-            const apiUrl = "http://13.211.124.91/getaws3image";
+            const apiUrl = "http://apiหลังบ้านgetaws3image";
             const queryParams = {
                 brand: brand,
                 name: name,
