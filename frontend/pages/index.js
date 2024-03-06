@@ -52,7 +52,7 @@ export default function Home() {
 
   const fetchDatacar = async () => {
     try {
-      const apiUrl = 'https://35.175.230.48/getallcar';
+      const apiUrl = 'http://localhost:8000/getallcar';
       const response = await axios.get(apiUrl);
       const data = response.data
       const yearArray = [];
@@ -189,10 +189,10 @@ export default function Home() {
               key={index}
               className={myFont.className}
               style={{
-                position: "fixed",
+                position: "absolute",
                 fontSize: 16,
-                left: 150,
-                top: 140 + index * 50,
+                left: "-20%",
+                top: 30 + index * 50,
                 cursor: "pointer",
                 color: selectedCar === car ? "blue" : "black",
                 borderBottom: index < datashow.length ? "1px solid gray" : "none", // เพิ่มบรรทัดนี้
@@ -208,9 +208,9 @@ export default function Home() {
         {selectedCar && (
           <Image
             src={selectedCar.car_image}
-            width={600}
-            height={400}
-            style={{ marginTop: -180, marginLeft: 1000, zIndex: 999 }}
+            width={550}
+            height={300}
+            style={{ marginTop: -180, marginLeft: 1000, zIndex: 9 }}
           />
         )}
 
