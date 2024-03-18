@@ -1,3 +1,5 @@
+ปรับ Github เป็น private เวลา gitclone ใช้ token classsic ใน ส่วน Dev ของ github
+
 สำหรับ Http
 ```
 ติดตั้งบน AWS EC2
@@ -16,7 +18,8 @@ server {
 -------------------------------------
 sudo service nginx restart
 
-การรัน uvicorn main:app --host 0.0.0.0 --port 8000
+การรันการทำงาน ใช้ cd .. และ cd ubentu/ และ github ที่ใช้รัน  
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 สำหรับ Https
@@ -50,7 +53,7 @@ server {
 -------------------------------------
 sudo service nginx restart
 
-การรัน
+การรันการทำงาน ใช้ cd .. และ cd ubentu/ และ github ที่ใช้รัน  
 python3 -m uvicorn main:app 
 ```
 
