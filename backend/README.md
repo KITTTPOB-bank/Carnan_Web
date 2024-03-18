@@ -15,8 +15,8 @@ server {
 }
 -------------------------------------
 sudo service nginx restart
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
+
+การรัน uvicorn main:app --host 0.0.0.0 --port 8000
 
 
 สำหรับ Https
@@ -24,12 +24,16 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ติดตั้งบน AWS EC2
 sudo apt-get update / sudo apt install python3-pip
 pip3 install -r requirements.txt
-sudo apt install nginx -> sudo apt-get install openssl -> cd /etc/nginx
+sudo apt install nginx -> sudo apt-get install openssl 
+
+cd /etc/nginx
 sudo mkdir ssl 
+
 sudo openssl req -batch -x509 -nodes -days 365 \
 -newkey rsa:2048 \
 -keyout /etc/nginx/ssl/server.key \
 -out /etc/nginx/ssl/server.crt
+
 cd /etc/nginx/sites-enabled/ -> sudo nano fastapi_nginx
 --------------------------------------
 server {
@@ -38,12 +42,13 @@ server {
     ssl on;
     ssl_certificate /etc/nginx/ssl/server.crt;
     ssl_certificate_key /etc/nginx/ssl/server.key;
-    server_name 3.81.234.197;
+    server_name ****;
     location / {
         proxy_pass http://127.0.0.1:8000;
     }
 }
 -------------------------------------
 sudo service nginx restart
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
+
+การรัน
+python3 -m uvicorn main:app 
