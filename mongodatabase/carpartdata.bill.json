@@ -1,0 +1,23 @@
+[
+  {
+    "_id": 1,
+    "car_name": "Toyota CorollaCross 2022 (03/08/2024)",
+    "carparts_list": [
+      {
+        "_id": 1,
+        "code": "xxxx-A0059",
+        "name": "xxxx Cover Heat Shield Screw",
+        "price": 50.00,
+        "item": "กันชนหน้า"
+      },
+      {
+        "_id": 2,
+        "name": "Bumper Cover",
+        "code": "xxx-0A060",
+        "price": 50.01,
+        "item": "กันชนหน้า"
+      }
+    ],
+    "total_price": 1000.1
+  }
+]

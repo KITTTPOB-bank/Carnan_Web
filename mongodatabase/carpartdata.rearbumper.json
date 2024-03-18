@@ -1,0 +1,20 @@
+[
+  {
+    "_id": 1,
+    "code": "xxxx-01",
+    "name": "car spare 01",
+    "price": 555.55
+  },
+  {
+    "_id": 2,
+    "code": "xxxx-02",
+    "name": "car spare 02",
+    "price": 70.01
+  },
+  {
+    "_id": 3,
+    "code": "xxxx-02",
+    "name": "car spare 03",
+    "price": 0
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "_id": 2,
+    "user_id": 2,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcGxlMDMxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoibWFwbGUwMDAwIn0.MBbdZZAWYYl2uPFdIdlba2TcCA3fgW6wEQtuMNA56QM",
+    "time_stamp": {
+      "$date": "2024-02-27T15:23:27.334Z"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "_id": 2,
+    "email": "maple031@gmail.com",
+    "password": "maple0000",
+    "bill_list": [
+      1
+    ],
+    "owncar_list": [
+      1,
+      4
+    ]
+  }
+]
