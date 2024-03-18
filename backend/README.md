@@ -1,4 +1,4 @@
-ปรับ Github เป็น private เวลา gitclone ใช้ token classsic ใน ส่วน Dev ของ github
+ปรับ Github เป็น private เวลา gitclone ใช้ token classsic ใน ส่วน Developer Settings ของ github
 
 สำหรับ Http
 ```
