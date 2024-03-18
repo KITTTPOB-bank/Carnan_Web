@@ -52,3 +52,5 @@ sudo service nginx restart
 
 การรัน
 python3 -m uvicorn main:app 
+```
+
