@@ -544,8 +544,8 @@ def download_images_from_s3(name: str, brand: str, year: int):
     bucket_name = 'carimageapp'
     s3_folder = f'Trendmodelpicture/{brand} {name} {year}/'
 
-    s3 = boto3.client('s3', aws_access_key_id='xxxxx',
-                        aws_secret_access_key='xxxx')
+    s3 = boto3.client('s3', aws_access_key_id='****',
+                        aws_secret_access_key='****')
     try:
         objects = s3.list_objects(Bucket=bucket_name, Prefix=s3_folder)['Contents']
         
