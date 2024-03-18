@@ -539,7 +539,32 @@ async def getimagecar(name: str, brand: str, year: int):
         return JSONResponse(content={'error': str(e)}, status_code=500)
 
 
+@app.get("/downloadfile")
+def download_images_from_s3(name: str, brand: str, year: int):
+    bucket_name = 'carimageapp'
+    s3_folder = f'Trendmodelpicture/{brand} {name} {year}/'
 
+    s3 = boto3.client('s3', aws_access_key_id='xxxxx',
+                        aws_secret_access_key='xxxx')
+    try:
+        objects = s3.list_objects(Bucket=bucket_name, Prefix=s3_folder)['Contents']
+        
+        def generate_zip():
+            with io.BytesIO() as buffer:
+                with zipfile.ZipFile(buffer, 'w') as zipf:
+                    for obj in objects:
+                        key = obj['Key']
+                        s3_object = s3.get_object(Bucket=bucket_name, Key=key)
+                        zipf.writestr(key, s3_object['Body'].read())
+
+                buffer.seek(0)
+                yield from buffer
+
+        return StreamingResponse(generate_zip(), media_type='application/zip', headers={'Content-Disposition': f'attachment; filename={brand}_{name}_{year}.zip'})
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
 
 
 
