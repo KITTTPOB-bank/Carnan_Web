@@ -140,7 +140,7 @@ const TableCarPart = () => {
 
   const fetchDatacar = async () => {
     try {
-      const apiUrl = "https://3.81.234.197/cardata";
+      const apiUrl = "https://35.153.205.178/cardata";
       const response = await axios.get(apiUrl);
       setCarSelect(response.data);
     } catch (error) {
@@ -149,7 +149,7 @@ const TableCarPart = () => {
   };
   const fetchDatapart = async () => {
     try {
-      const apiUrl = "https://3.81.234.197/carpart";
+      const apiUrl = "https://35.153.205.178/carpart";
       const queryParams = {
         brand: requestbrand,
         name: requestname,
@@ -232,7 +232,7 @@ const TableCarPart = () => {
     formData.append("typecheck", typesend);
 
     await axios
-      .post(`https://3.81.234.197/jsonfileaddcarpart`, formData)
+      .post(`https://35.153.205.178/jsonfileaddcarpart`, formData)
       .then((response) => {
         console.log("Upload successful", response.data);
       })
@@ -301,7 +301,7 @@ const TableCarPart = () => {
   };
 
   const Addsubmit = async () => {
-    const apiUrl = "https://3.81.234.197/addpart";
+    const apiUrl = "https://35.153.205.178/addpart";
     const requestData = {
       selected_ids: listparts_add,
       type: typesend,
@@ -344,7 +344,7 @@ const TableCarPart = () => {
       setEdit(false);
     }
     console.log(editid, old_editid);
-    const apiUrl = "https://3.81.234.197/editpart";
+    const apiUrl = "https://35.153.205.178/editpart";
     const requestData = {
       newid: editid,
       oldid: old_editid,
@@ -370,7 +370,7 @@ const TableCarPart = () => {
     const newItem = { _id: id, name: name, price: price, code: code };
 
     // ส่งข้อมูลการลบ
-    const apiUrl = "https://3.81.234.197/deletepart";
+    const apiUrl = "https://35.153.205.178/deletepart";
     const requestData = {
       delid: id,
       type: typesend,

@@ -75,7 +75,7 @@ const carimagemanager = () => {
 
   const fetchDatacar = async () => {
     try {
-      const apiUrl = "https://3.81.234.197/cardataadmin";
+      const apiUrl = "https://35.153.205.178/cardataadmin";
       const response = await axios.get(apiUrl);
       setDataSource(response.data);
       console.log(dataSource);
@@ -281,7 +281,7 @@ const carimagemanager = () => {
 
   const handleDelete = async (key) => {
     const newData = dataSource.filter((item) => item._id !== key._id);
-    const apiUrl = "https://3.81.234.197/dropcar";
+    const apiUrl = "https://35.153.205.178/dropcar";
     const requestData = {
       delid: key._id,
     };
@@ -323,7 +323,7 @@ const carimagemanager = () => {
     fileList,
   };
   const Addnewcar = async () => {
-    const apiUrl = "https://3.81.234.197/addcar";
+    const apiUrl = "https://35.153.205.178/addcar";
     if (
       newn == "" ||
       newb == "" ||

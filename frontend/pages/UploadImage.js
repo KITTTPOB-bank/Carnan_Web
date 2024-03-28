@@ -58,7 +58,7 @@ const UploadImage = () => {
         onDrop
     })
     const submit = async () => {
-        const apiUrl = 'https://3.81.234.197/uploadscars';
+        const apiUrl = 'https://35.153.205.178/uploadscars';
         if (files.length == 0) {
             alert('ไม่มีรูปภาพที่จะอัปโหลด!')
             return

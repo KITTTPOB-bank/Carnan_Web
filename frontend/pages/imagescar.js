@@ -43,7 +43,7 @@ const imagescar = () => {
     };
     const fetchDataimage = async () => {
         try {
-            const apiUrl = "https://3.81.234.197/getaws3image";
+            const apiUrl = "https://35.153.205.178/getaws3image";
             const queryParams = {
                 brand: brand,
                 name: name,
@@ -134,7 +134,7 @@ const imagescar = () => {
     const handleDeleteImage = async (index) => {
         const updatedImages = [...images];
         updatedImages.splice(index, 1);
-        // const apiUrl = "https://3.81.234.197/dropimage";
+        // const apiUrl = "https://35.153.205.178/dropimage";
         // const queryParams = {
         //     name: images[index],
         // };
