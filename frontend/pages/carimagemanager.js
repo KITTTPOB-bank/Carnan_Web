@@ -59,7 +59,7 @@ const carimagemanager = () => {
 
     const fetchDatacar = async () => {
         try {
-            const apiUrl = 'https://35.153.205.178/cardataadmin';
+            const apiUrl = 'https://54.173.229.99/cardataadmin';
             const response = await axios.get(apiUrl);
             setDataSource(response.data);
             console.log(dataSource)
@@ -330,7 +330,7 @@ const carimagemanager = () => {
         setLoadingd(true)
         try {
             const { name, brand, year } = record;
-            const apiUrl = "https://35.153.205.178/downloadfile";
+            const apiUrl = "https://54.173.229.99/downloadfile";
             const queryParams = {
                 brand: brand,
                 name: name,

@@ -96,7 +96,7 @@ const Tablepart = () => {
     formData.append("file", file);
 
     await axios
-      .post(`https://35.153.205.178/jsonfile?typecheck=${typesend}`, formData)
+      .post(`https://54.173.229.99/jsonfile?typecheck=${typesend}`, formData)
       .then((response) => {
         console.log("Upload successful", response.data);
       })
@@ -176,7 +176,7 @@ const Tablepart = () => {
 
   const fetchDatapart = async () => {
     try {
-      const apiUrl = "https://35.153.205.178/carpartall";
+      const apiUrl = "https://54.173.229.99/carpartall";
       const response = await axios.get(apiUrl);
       setallDataSource(response.data);
       setDataSource(response.data.all_frontbumper);
@@ -396,7 +396,7 @@ const Tablepart = () => {
   ];
 
   const handleDelete = async (id) => {
-    const apiUrl = "https://35.153.205.178/deleteallpart";
+    const apiUrl = "https://54.173.229.99/deleteallpart";
     const requestData = {
       delid: id,
       type: typesend,
@@ -446,7 +446,7 @@ const Tablepart = () => {
   };
 
   const AddNewData = async () => {
-    const apiUrl = "https://35.153.205.178/addallpart";
+    const apiUrl = "https://54.173.229.99/addallpart";
     const requestData = {
       name: name_new,
       code: code_new,
@@ -464,7 +464,7 @@ const Tablepart = () => {
 
   const Editpartdata = async () => {
     console.log(editValue);
-    const apiUrl = "https://35.153.205.178/editallpart";
+    const apiUrl = "https://54.173.229.99/editallpart";
     const requestData = {
       name: name_edit,
       code: code_edit,
